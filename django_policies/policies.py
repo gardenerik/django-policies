@@ -12,16 +12,16 @@ class Policy:
     no_object_suffix: str = "_some"
     deny_anonymous: bool | None = None
 
-    def get_permission_methods(self, permission: str) -> set[str]:
-        methods = set()
+    def get_permission_methods(self, permission: str) -> list[str]:
+        methods = []
         permission = permission.split(".", 1)[-1]
 
         # can_change_model
-        methods.add(f"can_{permission}")
+        methods.append(f"can_{permission}")
 
         # can_change
         perm_name = permission.rsplit("_", 1)[0]
-        methods.add(f"can_{perm_name}")
+        methods.append(f"can_{perm_name}")
 
         return methods
 

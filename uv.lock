@@ -130,7 +130,7 @@ wheels = [
 
 [[package]]
 name = "django-policies"
-version = "0.1.0"
+version = "0.2"
 source = { editable = "." }
 dependencies = [
     { name = "django" },

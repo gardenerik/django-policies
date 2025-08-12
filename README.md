@@ -64,8 +64,8 @@ the model (`add_<model>`, `change_<model>`, `delete_<model>`, `view_<model>`)
 and more can be added using [permissions](https://docs.djangoproject.com/en/dev/ref/models/options/#permissions)
 in the model's meta.
 
-For every permission, two methods on the policy class are considered (in no
-particular order, you should define only one of them):
+For every permission, two methods on the policy class are considered (in this order,
+first that is found will be called):
 
 - full permission name: `can_change_article`
 - last part of the permission name dropped: `can_change`
